@@ -52,3 +52,5 @@ window.addEventListener('storage',e=>{if(e.key===cartKey){try{cart=cleanCart(JSO
 
 refreshPrices();
 window.addEventListener('focus',()=>refreshPrices());
+
+const termsDetails=document.querySelector('#terms-and-conditions details');function revealTerms(){if(window.location.hash==='#terms-and-conditions')termsDetails.open=true;}window.addEventListener('hashchange',revealTerms);document.querySelector('a[href="#terms-and-conditions"]').addEventListener('click',()=>{termsDetails.open=true;});revealTerms();
